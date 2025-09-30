@@ -1,0 +1,36 @@
+{
+  "name": "rare-books---trabalho-final-ppi-2025---fipp",
+  "version": "1.0.0",
+  "description": "Rare Books is a web application developed for the Internet Programming course at the FIPP Computer Science Faculty - node - express - MySQL - HTML - GIT - JavaScript",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gameprei/Rare-Books---Trabalho-final-PPI-2025---FIPP.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "MySQL",
+    "Javascript",
+    "web",
+    "frontend",
+    "backend"
+  ],
+  "author": "Luiz Henrique da Silva Garcia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gameprei/Rare-Books---Trabalho-final-PPI-2025---FIPP/issues"
+  },
+  "homepage": "https://github.com/gameprei/Rare-Books---Trabalho-final-PPI-2025---FIPP#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.15.1"
+  }
+}
