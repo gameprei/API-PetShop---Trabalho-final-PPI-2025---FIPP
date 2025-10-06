@@ -4,11 +4,11 @@ export default class Cliente{
     #cli_telefone;
     #cli_email;
 
-    constructor(cpf = "", nome = "", telefone = "", email = ""){
-        this.#cli_cpf = cpf;
-        this.#cli_nome = nome;
-        this.#cli_telefone = telefone;
-        this.#cli_email = email;
+    constructor(cli_cpf = "", cli_nome = "", cli_telefone = "", cli_email = ""){
+        this.#cli_cpf = cli_cpf;
+        this.#cli_nome = cli_nome;
+        this.#cli_telefone = cli_telefone;
+        this.#cli_email = cli_email;
     }
 
     // Setter e Getters Cliente //
@@ -16,26 +16,26 @@ export default class Cliente{
     get cpf(){
         return this.#cli_cpf
     };
-    set cpf(cpf){
-        this.#cli_cpf = cpf;
+    set cpf(cli_cpf){
+        this.#cli_cpf = cli_cpf;
     };
     get nome(){
         return this.#cli_nome;
     };
-    set nome(nome){
-        this.#cli_nome = nome;
+    set nome(cli_nome){
+        this.#cli_nome = cli_nome;
     };
     get telefone(){
         return this.#cli_telefone
     };
-    set telefone(telefone){
-        this.#cli_telefone = telefone;
+    set telefone(cli_telefone){
+        this.#cli_telefone = cli_telefone;
     };
     get email(){
         return this.#cli_email;
     };
-    set email(email){
-        this.#cli_email = email;    
+    set email(cli_email){
+        this.#cli_email = cli_email;    
     };
 
     // Métodos ToJson e ToString //

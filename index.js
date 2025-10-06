@@ -3,7 +3,7 @@ import cors from 'cors';
 
 
 const host = "0.0.0.0";
-const port = 4000;
+const port = 3000;
 const app = express();
 
 app.use(express.json());
