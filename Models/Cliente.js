@@ -1,3 +1,5 @@
+import ClienteDAO from "../DB/clienteDAO.js";
+
 export default class Cliente{
     #cli_cpf; 
     #cli_nome;
@@ -57,5 +59,24 @@ export default class Cliente{
         };
     };
 
+    async gravar() {
+        const clienteDAO = new ClienteDAO();
+        await clienteDAO.gravar(this);
+    }
+
+    async alterar() {
+        const clienteDAO = new ClienteDAO();
+        await clienteDAO.alterar(this);
+    }
+
+    async excluir(cpf) {
+        const clienteDAO = new ClienteDAO();
+        await clienteDAO.excluir(cpf);
+    }
+
+    async consultar(cpf) { 
+        const clienteDAO = new ClienteDAO();
+        return await clienteDAO.consultar(cpf);
+    }
 
 }
