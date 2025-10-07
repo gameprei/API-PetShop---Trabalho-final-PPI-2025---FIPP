@@ -45,15 +45,15 @@ export default class Livro{
         ID: ${this.#liv_id}\n
         Título: ${this.#liv_titulo}\n
         Autor: ${this.#liv_autor}\n
-        Cliente Interessado: ${this.#cli_cpf}\n`;
+        CPF Cliente: ${this.#cli_cpf}\n`;
     };
 
     toJson(){
         return{
             id: this.#liv_id,
-            Título: this.#liv_titulo,
+            Titulo: this.#liv_titulo,
             Autor: this.#liv_autor,
-            Cliente: this.#cli_cpf 
+            Cliente_CPF: this.#cli_cpf 
         };
     };
 

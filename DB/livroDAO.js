@@ -61,6 +61,32 @@ export default class LivroDAO{
         return listaLivros;
     };
 
+    async consultarLivroPorCliente(cli_cpf){
+
+        const connection = await Connect();
+        const sql = "SELECT L.liv_id, L.liv_titulo, L.liv_autor, L.cli_cpf, C.cli_nome FROM LIVROS L INNER JOIN CLIENTES C ON L.cli_cpf = C.cli_cpf WHERE L.cli_cpf = ? ";
+        const values = [cli_cpf]
+        const [rows] = await connection.query(sql, values);
+        
+        connection.release();
+        let listaLivros = [];
+
+        for (const row of rows){
+            const livro = new Livro(
+                row.liv_id,
+                row.liv_titulo,
+                row.liv_autor,
+                row.cli_cpf
+            );
+            const livroJson = livro.toJson();
+            livroJson.cliente_nome = row.cli_nome;
+
+            listaLivros.push(livroJson);
+            
+        };
+        return listaLivros;
+    }
+
     async associarCliente(livroId, cliCpf) {
         const connection = await Connect();
         try {
