@@ -9,7 +9,7 @@ export default async function Connect() {
             host: "localhost",
             user: "root",
             password: "0jjx@Z$35kTvR3",
-            database: "RareBooksDB",
+            database: "petshopdb",
             waitForConnections: true,
             connectionLimit: 10,
             maxIdle: 10,
